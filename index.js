@@ -8,6 +8,7 @@ import hotelsRoute from "./routes/hotels.js";
 
 const app = express();
 dotenv.config();
+
 const connect = async () => {
   try {
     await mongoose.connect(process.env.MONGO);
@@ -17,12 +18,12 @@ const connect = async () => {
   }
 };
 mongoose.connection.on("disconnected", () => {
-  console.log("mongoDB disconnect");
+  console.log("mongoDB disconnected");
 });
 
 // midddleware
 
-app.use(express.json());
+app.use(express.json())
 
 app.use("/auth", authRoute);
 app.use("/api/users", usesrRoute);
