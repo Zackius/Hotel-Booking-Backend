@@ -1,7 +1,9 @@
 import express, { response } from "express"
 
 const router = express.Router();
-//CREATE
- 
+
+router.get("/", (req, res) => {
+    res.send("Hello, thii s auth")
+})
 
 export default router
