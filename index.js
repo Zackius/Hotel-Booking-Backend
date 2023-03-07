@@ -25,7 +25,7 @@ mongoose.connection.on("disconnected", () => {
 
 app.use(express.json())
 
-app.use("/auth", authRoute);
+app.use("/api/auth", authRoute);
 app.use("/api/users", usesrRoute);
 app.use("/api/rooms", roomsRoute);
 app.use("/api/hotels", hotelsRoute);
