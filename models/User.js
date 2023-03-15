@@ -20,6 +20,6 @@ password: {
         default: false,
       },
 },
-    {timestamps:}
+    {timestamps: true}
 )
 export default  mongoose.model("User", UserSchema)
