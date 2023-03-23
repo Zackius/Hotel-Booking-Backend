@@ -7,14 +7,17 @@ const RoomSchema = new mongoose.Schema({
       },
 price: {
         type: Number,
-    required: true,
-        unique: true
+    required: true,  
       },
 maxPeople: {
         type: Number,
         required: true,
-      },
-      isAdmin: [{number:Number, unavailableDates: [{type: [Date  ]}]}],
+  },
+  desc: {
+    type: String, 
+    required: true,
+  },
+  roomNumbers: [{ number: Number, unavailableDates: { type: [Date] } }],
 },
     {timestamps: true}
 )
